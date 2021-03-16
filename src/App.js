@@ -27,8 +27,11 @@ export function App() {
   );
 }
 
-// export default App;
-// <Route render={() => {
+export default App;
+
+
+
+// {/* <Route render={() => {
 //   if (sessionStorage.getItem(userStorageKey)) {
 //     return (
 //       <>
@@ -45,5 +48,5 @@ export function App() {
 // </Route>
 // <Route path="/register">
 // <Register />
-// </Route>
+// </Route> */}
  
