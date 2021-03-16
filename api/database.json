@@ -1,0 +1,25 @@
+{
+    "users":[
+    {
+        "id": 1,
+        "name": "",
+        "email": "",
+        "address": "",
+        "phoneNumber": 1,
+        "birthdate": 1
+    }
+  ],
+  "records":[
+    {
+        "id": 1,
+        "userId": "",
+        "name": "",
+        "artist": "",
+        "genreId": "",
+        "conditionId": "",
+        "price": "",
+        "availability": true
+    }
+  ]
+
+}

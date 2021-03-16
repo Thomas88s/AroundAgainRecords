@@ -1,19 +1,19 @@
-.App {
+.RecordApp {
   text-align: center;
 }
 
-.App-logo {
+.RecordApp-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .RecordApp-logo {
+    animation: RecordApp-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.RecordApp-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,11 +24,11 @@
   color: white;
 }
 
-.App-link {
+.RecordApp-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes RecordApp-logo-spin {
   from {
     transform: rotate(0deg);
   }

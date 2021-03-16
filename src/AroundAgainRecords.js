@@ -4,18 +4,18 @@
 // import { userStorageKey } from "./auth/authSettings"
 
 import logo from './logo.svg';
-import './App.css';
+import './AroundAgainRecordsApp.css';
 
-export function App() {
+export function RecordApp() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="RecordApp">
+      <header className="RecordApp-header">
+        <img src={logo} className="RecordApp-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className="RecordApp-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -27,7 +27,7 @@ export function App() {
   );
 }
 
-export default App;
+export default RecordApp;
 
 
 
