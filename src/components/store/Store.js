@@ -1,10 +1,18 @@
 import React from "react"
-import { RecordStoreViews } from "./RecordStoreViews"
+import { RecordCard } from "../records/RecordCard"
+// import { AppViews } from "../../AppViews"
+// import { NavBar } from "../nav/NavBar";
 import "./Store.css"
 
 export const Store = () => (
     <>
-        <h2>Around Again Records</h2>
-       <RecordStoreViews />
+        <h1>Around Again Records</h1>
+       
+       <h2>Animals</h2>
+        <article className="records">
+            <RecordCard />
+            <RecordCard />
+            <RecordCard />
+        </article>
     </>
 )

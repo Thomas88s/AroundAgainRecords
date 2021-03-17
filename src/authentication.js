@@ -3,31 +3,6 @@
 // import { Register } from "./auth/Register"
 // import { userStorageKey } from "./auth/authSettings"
 
-import logo from './logo.svg';
-import './AroundAgainRecords.css';
-
-export function RecordApp() {
-  return (
-    <div className="RecordApp">
-      <header className="RecordApp-header">
-        <img src={logo} className="RecordApp-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="RecordApp-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default RecordApp;
 
 
 

@@ -13,7 +13,7 @@ export const RecordProvider = (props) => {
     // performs state transitions in your database
     // NEEDS MORE CLARIFING!!!!!
     const getRecords = () => {
-    return fetch("http://localhost:8088/records?_expand=location")
+    return fetch("http://localhost:8088/records")
       .then(res => res.json())
       .then(setRecords)
 }
