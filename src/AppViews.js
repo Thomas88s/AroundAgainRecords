@@ -1,10 +1,10 @@
 import React from "react"
 import { Route } from "react-router-dom"
 // import { Home } from "./Home"
-import { RecordList } from "./records/RecordList"
-import { RecordProvider } from "./records/RecordProvider"
+import { RecordList } from "./components/records/RecordList"
+import { RecordProvider } from "./components/records/RecordProvider"
 
-export const RecordStoreViews = () => {
+export const AppViews = () => {
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
@@ -13,11 +13,11 @@ export const RecordStoreViews = () => {
             </Route> */}
 
             {/* Render the animal list when http://localhost:3000/animals */}
-            <Route exact path="/records">
-                <RecordProvider>
+            <RecordProvider>
+               <Route exact path="/records">
                     <RecordList />
-                </RecordProvider>
-            </Route>
+               </Route>
+            </RecordProvider>
         </>
     )
 }
