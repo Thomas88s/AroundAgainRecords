@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { RecordContext } from "./RecordProvider"
-import { RecordCard } from "./RecordCard"
-import "./Animal.css"
+import { RecordCard } from "./RecordCard.js"
+import "./Record.css"
 
 export const RecordList = () => {
 //   RecordContext is passed and changes state when `getAnimals()` is invoked
