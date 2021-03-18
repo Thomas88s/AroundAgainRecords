@@ -18,15 +18,15 @@ export const RecordProvider = (props) => {
       .then(setRecords)
 }
 //   NEEDS NOTES!!!!
-    const addRecord = recordObj => {
+    const addRecord = record => {
     return fetch("http://localhost:8088/records", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(recordObj)
+        body: JSON.stringify(record)
     })
-    .then(getRecords)
+    .then(response => response.json())
 }
 return (
     // context provider allows any child elements to access states and functions
