@@ -7,12 +7,11 @@ import { RecordProvider } from "./components/records/RecordProvider"
 export const AppViews = () => {
     return (
         <>
-            {/* Render the location list when http://localhost:3000/ */}
+            
             <Route exact path="/">
                 <Home />
             </Route>
 
-            {/* Render the animal list when http://localhost:3000/animals */}
             <RecordProvider>
                <Route exact path="/records">
                     <RecordList />

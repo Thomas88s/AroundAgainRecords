@@ -17,16 +17,13 @@ export const RecordForm = () => {
 
       const history = useHistory();
 
-    /*
-    Reach out to the world and get customers state
-    and locations state on initialization, so we can provide their data in the form dropdowns
-    */
+    
+  
+    
     // useEffect(() => {
     //   getRecords().then(getRecords)
     // }, [])
 
-    //when a field changes, update state. The return will re-render and display based on the values in state
-        // NOTE! What's happening in this function can be very difficult to grasp. Read it over many times and ask a lot questions about it.
     //Controlled component
     const handleControlledInputChange = (event) => {
       /* When changing a state object or array,
