@@ -26,7 +26,7 @@ export const RecordProvider = (props) => {
         },
         body: JSON.stringify(recordObj)
     })
-    .then(getRecords)
+    .then(reponse => reponse.json())
 }
 return (
     // context provider allows any child elements to access states and functions
