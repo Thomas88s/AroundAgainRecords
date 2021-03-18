@@ -1,9 +1,26 @@
 import React from "react"
+import { RecordContext } from "./RecordProvider"
+import { useHistory } from "react-router-dom"
 import "./Record.css"
 
-export const RecordCard = ({ record }) => (
-    <section className="record">
-        <h3 className="record__name">Blood on the Tracks</h3>
-        <div className="record__artist">Artist: Bob Dylan</div>
+export const RecordCard = ({ record }) => {
+    const { deleteRecord } = RecordContext(RecordContext)
+
+    const history = useHistory()
+
+  const handleRelease = () => {
+      deleteRecord(record.id)
+        .then(() => {
+          history.push("/records")
+        })
+    }
+
+    <section className="record" id="recordId">
+        <h3 className="record__name">{record.name}</h3>
+        <div className="record__artist">Artist: {record.artist}</div>
+        <button onClick={() => {
+               history.push(`/events/edit/${record.id}`)
+           }}>Edit</button>
+          <button onClick={handleRelease}>Delete Record</button>
     </section>
-)
+}

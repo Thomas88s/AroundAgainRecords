@@ -1,20 +1,19 @@
 import React from "react"
-import { RecordCard } from "../records/RecordCard"
+import { Route } from "react-router-dom"
 
-// import { AppViews } from "../../AppViews"
-// import { NavBar } from "../nav/NavBar";
+import { AppViews } from "../../AppViews"
+import { NavBar } from "../navigation/NavBar";
 import "./Store.css"
 
 export const Store = () => (
     <>
-        <h1>Around Again Records</h1>
-       
-       <h2>Records</h2>
-       
-        <article className="records">
-            <RecordCard />
-            <RecordCard />
-            <RecordCard />
-        </article>
+     <Route>
+            
+              <NavBar />
+              <AppViews />
+            
+
+         
+     </Route> 
     </>
 )
