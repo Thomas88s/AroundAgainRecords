@@ -16,8 +16,8 @@ export const RecordCard = ({ record }) => {
     }
    return(
     <section className="record" id="recordId">
-        <h3 className="record__name">{record.name}</h3>
-        <div className="record__artist">Artist: {record.artist}</div>
+        <h3 className="recordName">{record.name}</h3>
+        <div className="recordArtist">Artist: {record.artist}</div>
         <button onClick={() => {
                history.push(`/events/edit/${record.id}`)
            }}>Edit</button>

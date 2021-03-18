@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import { RecordContext } from "./RecordProvider"
 import { RecordCard } from "./RecordCard.js"
-
-
 import "./Record.css"
+
+
 
 
 
@@ -21,6 +21,7 @@ useEffect(() => {
 return (
     <>
       <div className="records">
+        <h3>Records</h3>
       <button className= "recordButton" onClick={() => {history.push("/records/create")}}>
             Add Record
           </button>

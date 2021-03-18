@@ -9,9 +9,9 @@ export const AppViews = () => {
     return (
         <>
             <RecordProvider>
+            <RecordForm />
             <Route exact path="/">
                 <Home />
-            <RecordForm />
             </Route>
 
                <Route exact path="/records">

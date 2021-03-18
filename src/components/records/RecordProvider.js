@@ -32,11 +32,11 @@ const getRecordById = (id) => {
         },
         body: JSON.stringify(recordObj)
     })
-    .then(reponse => reponse.json())
+    .then(getRecords)
 }
 
 const deleteRecord = recordId => {
-    return fetch(`http://localhost:8088/events/${recordId}`, {
+    return fetch(`http://localhost:8088/records/${recordId}`, {
         method: "DELETE"
     })
         .then(getRecords)

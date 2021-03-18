@@ -11,19 +11,9 @@
   ],
   "records": [
     {
-      "id": 1,
-      "userId": "",
-      "name": "Blood on the Tracks",
-      "artist": "Artist: Bob Dylan",
-      "genreId": "",
-      "conditionId": "",
-      "price": "",
-      "availability": true
-    },
-    {
       "name": "shadowrun",
       "artist": "foodmunchers",
-      "id": 2
+      "id": 3
     }
   ]
 }

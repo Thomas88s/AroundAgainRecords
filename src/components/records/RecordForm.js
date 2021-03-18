@@ -12,6 +12,10 @@ export const RecordForm = () => {
         recordId: 0
       });
 
+      useEffect(() => {
+        getRecords()
+      }, [])
+
     const [isLoading, setIsLoading] = useState(true);
 
     const { recordId } = useParams();
@@ -22,9 +26,6 @@ export const RecordForm = () => {
     Reach out to the world and get customers state
     and locations state on initialization, so we can provide their data in the form dropdowns
     */
-    useEffect(() => {
-      getRecords().then(getRecords)
-    }, [])
 
     //when a field changes, update state. The return will re-render and display based on the values in state
         // NOTE! What's happening in this function can be very difficult to grasp. Read it over many times and ask a lot questions about it.
@@ -46,7 +47,7 @@ export const RecordForm = () => {
       setRecord(newRecord)
     }
 
-    const handleClickSaveRecord = (event) => {
+    const handleClickSaveEvent = (event) => {
       event.preventDefault() //Prevents the browser from submitting the form
 
       if (parseInt(event.eventId) === 0) {
@@ -66,7 +67,6 @@ export const RecordForm = () => {
         
         addRecord({
             name: record.name,
-            date: record.date,
             artist: record.artist
             
         })
@@ -78,7 +78,7 @@ export const RecordForm = () => {
       getRecords().then(() => {
         if (recordId) {
           getRecordById(recordId)
-          .then(event => {
+          .then(record => {
               setRecord(record)
               setIsLoading(false)
           })
@@ -92,7 +92,7 @@ export const RecordForm = () => {
 
     return (
       <form className="recordForm">
-          <h2 className="recordForm__title">New Record</h2>
+          <h2 className="recordFormTitle">New Record</h2>
           <fieldset>
               <div className="form-group">
                   <label htmlFor="name">Record name:</label>
@@ -107,7 +107,7 @@ export const RecordForm = () => {
           </fieldset>
           <button className="btn btn-primary"
           disabled={isLoading}
-            onClick={handleClickSaveRecord}>
+            onClick={handleClickSaveEvent}>
             Save Record
           </button>
       </form>
