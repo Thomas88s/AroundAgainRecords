@@ -1,25 +1,29 @@
 {
-    "users":[
+  "users": [
     {
-        "id": 1,
-        "name": "",
-        "email": "",
-        "address": "",
-        "phoneNumber": 1,
-        "birthdate": 1
+      "id": 1,
+      "name": "",
+      "email": "",
+      "address": "",
+      "phoneNumber": 1,
+      "birthdate": 1
     }
   ],
-  "records":[
+  "records": [
     {
-        "id": 1,
-        "userId": "",
-        "name": "Blood on the Tracks",
-        "artist": "Artist: Bob Dylan",
-        "genreId": "",
-        "conditionId": "",
-        "price": "",
-        "availability": true
+      "id": 1,
+      "userId": "",
+      "name": "Blood on the Tracks",
+      "artist": "Artist: Bob Dylan",
+      "genreId": "",
+      "conditionId": "",
+      "price": "",
+      "availability": true
+    },
+    {
+      "name": "shadowrun",
+      "artist": "foodmunchers",
+      "id": 2
     }
   ]
-
 }

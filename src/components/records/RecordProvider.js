@@ -17,6 +17,12 @@ export const RecordProvider = (props) => {
       .then(res => res.json())
       .then(setRecords)
 }
+
+const getRecordById = (id) => {
+    return fetch(`http://localhost:8088/records/${id}`)
+    .then(res => res.json())
+    }
+
 //   NEEDS NOTES!!!!
     const addRecord = recordObj => {
     return fetch("http://localhost:8088/records", {
@@ -28,10 +34,29 @@ export const RecordProvider = (props) => {
     })
     .then(getRecords)
 }
+
+const deleteRecord = recordId => {
+    return fetch(`http://localhost:8088/events/${recordId}`, {
+        method: "DELETE"
+    })
+        .then(getRecords)
+}
+
+const updateRecord = record => {
+    return fetch(`http://localhost:8088/records/${record.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(record)
+    })
+      .then(getRecords)
+  }
+
 return (
     // context provider allows any child elements to access states and functions
     <RecordContext.Provider value={{
-        records, getRecords, addRecord
+        records, getRecords, addRecord, getRecordById, deleteRecord, updateRecord
     }}>
          {/* components that use the data from providers must be defined as children components */}
         {props.children}

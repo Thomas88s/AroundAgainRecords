@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react"
 import { RecordContext } from "./RecordProvider"
 import "./Record.css"
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 export const RecordForm = () => {
-    const { addRecord, getRecords } = useContext(RecordContext)
+    const { addRecord, getRecords, getRecordById, updateRecord } = useContext(RecordContext)
 
     const [record, setRecord] = useState({
         name: "",
@@ -15,6 +15,9 @@ export const RecordForm = () => {
         getRecords()
     }, [])
 
+    const [isLoading, setIsLoading] = useState(true);
+
+    const { recordId } = useParams();
       const history = useHistory();
 
     /*
@@ -48,9 +51,45 @@ export const RecordForm = () => {
     const handleClickSaveRecord = (event) => {
       event.preventDefault() //Prevents the browser from submitting the form
 
-        addRecord(record)
+      if (parseInt(event.eventId) === 0) {
+        window.alert("Please select")
+    } else {
+      setIsLoading(true);
+    
+    } if  (recordId){
+        updateRecord({
+            id: recordId,
+            name: record.name,
+            artist: record.artist
+             
+        })
         .then(() => history.push("/records"))
+      } else {
+        
+        addRecord({
+            name: record.name,
+            date: record.date,
+            artist: record.artist
+            
+        })
+        .then(() => history.push("/records"))
+      }
     }
+        
+    useEffect(() => {
+      getRecords().then(() => {
+        if (recordId) {
+          getRecordById(recordId)
+          .then(event => {
+              setRecord(record)
+              setIsLoading(false)
+          })
+        } else {
+          setIsLoading(false)
+        }
+      })
+    }, [])
+ 
    
 
     return (
@@ -69,6 +108,7 @@ export const RecordForm = () => {
               </div>
           </fieldset>
           <button className="btn btn-primary"
+          disabled={isLoading}
             onClick={handleClickSaveRecord}>
             Save Record
           </button>
