@@ -1,10 +1,10 @@
-import React from "react"
+import React, { useContext} from "react"
 import { RecordContext } from "./RecordProvider"
 import { useHistory } from "react-router-dom"
 import "./Record.css"
 
 export const RecordCard = ({ record }) => {
-    const { deleteRecord } = RecordContext(RecordContext)
+    const { deleteRecord } = useContext(RecordContext)
 
     const history = useHistory()
 
@@ -14,7 +14,7 @@ export const RecordCard = ({ record }) => {
           history.push("/records")
         })
     }
-
+   return(
     <section className="record" id="recordId">
         <h3 className="record__name">{record.name}</h3>
         <div className="record__artist">Artist: {record.artist}</div>
@@ -23,4 +23,5 @@ export const RecordCard = ({ record }) => {
            }}>Edit</button>
           <button onClick={handleRelease}>Delete Record</button>
     </section>
+   )
 }
