@@ -1,6 +1,6 @@
 import React from "react"
-import { RecordCard } from "../records/RecordCard"
-import { AppViews } from "../../AppViews"
+import { RecordCard } from "./components/records/RecordCard"
+import { AppViews } from "./AppViews"
 
 
 
