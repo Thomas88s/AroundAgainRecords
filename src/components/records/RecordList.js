@@ -1,17 +1,19 @@
 import React, { useContext, useEffect } from "react"
+import { useHistory } from "react-router-dom"
 import { RecordContext } from "./RecordProvider"
 import { RecordCard } from "./RecordCard.js"
-import { useHistory } from "react-router-dom"
+
 
 import "./Record.css"
 
-export const RecordList = () => {
-//   RecordContext is passed and changes state when `getAnimals()` is invoked
-    const { records, getRecords } = useContext(RecordContext)
 
+
+export const RecordList = () => {
+    //   RecordContext is passed and changes state when `getAnimals()` is invoked
+    const { records, getRecords } = useContext(RecordContext)
     const history = useHistory()
 // tells React that your component needs to call getRecords() after render
-// getRecords() is the API call for the animals 
+// getRecords() is the API call for the recordss 
 useEffect(() => {
     getRecords()
 }, [])

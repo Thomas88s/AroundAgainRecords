@@ -32,7 +32,7 @@ const getRecordById = (id) => {
         },
         body: JSON.stringify(recordObj)
     })
-    .then(getRecords)
+    .then(reponse => reponse.json())
 }
 
 const deleteRecord = recordId => {
