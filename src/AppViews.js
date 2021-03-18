@@ -12,8 +12,8 @@ export const AppViews = () => {
             <RecordProvider>
             <Route exact path="/">
                 <Home />
-                <RecordForm />
             </Route>
+                <RecordForm />
 
                <Route exact path="/records">
                     <RecordList />
