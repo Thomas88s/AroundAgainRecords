@@ -11,9 +11,32 @@
   ],
   "records": [
     {
-      "name": "shadowrun",
-      "artist": "foodmunchers",
+      "name": "samuri spirits",
+      "artist": "civic dooty",
       "id": 3
+    },
+    {
+      "name": "halo",
+      "artist": "Vast Unknown",
+      "id": 5
+    },
+    {
+      "userID": null,
+      "name": "HollowTruth",
+      "artist": "pickle breath",
+      "id": 6
+    },
+    {
+      "userID": null,
+      "name": "Kieftins",
+      "artist": "AA Quitters",
+      "id": 7
+    },
+    {
+      "userID": null,
+      "name": "CHOWDA' POWA'",
+      "artist": "NewEnglands worst",
+      "id": 8
     }
   ]
 }
