@@ -1,42 +1,35 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "",
-      "email": "",
-      "address": "",
-      "phoneNumber": 1,
-      "birthdate": 1
+      "email": "twitherow@bellsouth.net",
+      "name": "Thomas Witherow",
+      "id": 1
     }
   ],
   "records": [
     {
-      "name": "samuri spirits",
-      "artist": "civic dooty",
-      "id": 3
-    },
-    {
-      "name": "halo",
-      "artist": "Vast Unknown",
-      "id": 5
-    },
-    {
-      "userID": null,
+      "userID": 1,
       "name": "HollowTruth",
       "artist": "pickle breath",
       "id": 6
     },
     {
-      "userID": null,
-      "name": "Kieftins",
-      "artist": "AA Quitters",
+      "userID": 1,
+      "name": "happy",
+      "artist": "trails",
       "id": 7
     },
     {
-      "userID": null,
-      "name": "CHOWDA' POWA'",
-      "artist": "NewEnglands worst",
+      "userID": 1,
+      "name": "shadowrun",
+      "artist": "The Lawn KNomes",
       "id": 8
+    },
+    {
+      "userId": 1,
+      "name": "New",
+      "artist": "foofoos",
+      "id": 9
     }
   ]
 }

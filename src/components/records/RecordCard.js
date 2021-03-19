@@ -19,7 +19,7 @@ export const RecordCard = ({ record }) => {
         <h3 className="recordName">{record.name}</h3>
         <div className="recordArtist">Artist: {record.artist}</div>
         <button onClick={() => {
-               history.push(`/events/edit/${record.id}`)
+               history.push(`/records/edit/${record.id}`)
            }}>Edit</button>
           <button onClick={handleRelease}>Delete Record</button>
     </section>
