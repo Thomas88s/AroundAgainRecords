@@ -58,12 +58,12 @@ export const RecordForm = () => {
         window.alert("Fill all fields")
     }else{
         setIsLoading();
-        if (recordId && record.userID === currentUserId) {
+        if (recordId)  {
             
             updateRecord({
-                userId: currentUserId,
+                userId: 1,
                 name: record.name,
-                title: record.title,
+                artist: record.artist,
                 id: parseInt(recordId)
             })
             .then(() => history.push(`/records`))
