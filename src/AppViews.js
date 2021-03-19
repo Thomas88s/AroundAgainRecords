@@ -8,16 +8,18 @@ import { RecordForm } from "./components/records/RecordForm"
 export const AppViews = () => {
     return (
         <>
-            <RecordProvider>
-            <RecordForm />
-            <Route exact path="/">
                 <Home />
+        <RecordProvider>
+            <Route exact path="/records">
+                <RecordList />
             </Route>
-
-               <Route exact path="/records">
-                    <RecordList />
-               </Route>
-            </RecordProvider>
+            <Route exact path="/records/create">
+                <RecordForm />
+            </Route>
+            <Route path="/events/edit/:eventId(\d+)">
+                <RecordForm />
+            </Route>
+        </RecordProvider>
         </>
     )
 }

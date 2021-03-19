@@ -9,9 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
    <Router>
             <Store />
-
    </Router>
-   
   </React.StrictMode>,
   document.getElementById('root')
 );

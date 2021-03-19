@@ -6,20 +6,23 @@ import { useHistory, useParams } from 'react-router-dom';
 export const RecordForm = () => {
     const { addRecord, getRecords, getRecordById, updateRecord } = useContext(RecordContext)
 
+    const currentUserId = parseInt(sessionStorage.getItem("shopUser"))   
+
     const [record, setRecord] = useState({
+        userID: currentUserId,
         name: "",
         artist: "",
-        recordId: 0
+        
       });
+
+      const [isLoading, setIsLoading] = useState(true);
+      const { recordId } = useParams();
+
+      const history = useHistory();  
 
       useEffect(() => {
         getRecords()
-      }, [])
-
-    const [isLoading, setIsLoading] = useState(true);
-
-    const { recordId } = useParams();
-      const history = useHistory();
+      }, [])  
 
   
     /*
@@ -50,29 +53,26 @@ export const RecordForm = () => {
     const handleClickSaveEvent = (event) => {
       event.preventDefault() //Prevents the browser from submitting the form
 
-      if (parseInt(event.eventId) === 0) {
-        window.alert("Please select")
-    } else {
-      setIsLoading(true);
-    
-    } if  (recordId){
-        updateRecord({
-            id: recordId,
-            name: record.name,
-            artist: record.artist
-             
-        })
-        .then(() => history.push("/records"))
-      } else {
-        
-        addRecord({
-            name: record.name,
-            artist: record.artist
+   
+      if(record.name === "") {
+        window.alert("Fill all fields")
+    }else{
+        setIsLoading();
+        if (recordId && record.userID === currentUserId) {
             
-        })
-        .then(() => history.push("/records"))
-      }
-    }
+            updateRecord({
+                userId: currentUserId,
+                name: record.name,
+                title: record.title,
+                id: parseInt(recordId)
+            })
+            .then(() => history.push(`/records`))
+        } else {
+            addRecord(record)
+            .then(() => history.push(`/records`))
+        }
+  }
+}
         
     useEffect(() => {
       getRecords().then(() => {
@@ -92,7 +92,8 @@ export const RecordForm = () => {
 
     return (
       <form className="recordForm">
-          <h2 className="recordFormTitle">New Record</h2>
+          {/* <h2 className="recordFormTitle">New Record</h2> */}
+          <h2 className="RecordTitle">{recordId ? "Edit Record" : "Add Record"}</h2>
           <fieldset>
               <div className="form-group">
                   <label htmlFor="name">Record name:</label>
