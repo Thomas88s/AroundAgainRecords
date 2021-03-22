@@ -16,7 +16,7 @@ export const AppViews = () => {
             <Route exact path="/records/create">
                 <RecordForm />
             </Route>
-            <Route exact path="/records/edit/:recordId(\d)">
+            <Route exact path="/records/edit/:recordId(\d+)">
                 <RecordForm />
             </Route>
         </RecordProvider>

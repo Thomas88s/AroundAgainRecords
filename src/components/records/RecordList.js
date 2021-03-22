@@ -5,9 +5,6 @@ import { RecordCard } from "./RecordCard.js"
 import "./Record.css"
 
 
-
-
-
 export const RecordList = () => {
     //   RecordContext is passed and changes state when `getRecords()` is invoked
     const { records, getRecords } = useContext(RecordContext)
