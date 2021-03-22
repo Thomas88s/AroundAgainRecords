@@ -6,11 +6,6 @@
       "id": 1
     },
     {
-      "email": "twitherow@bellsouth.net",
-      "name": "Thomas Witherow",
-      "id": 1
-    },
-    {
       "email": "raoulduke@gonzo.com",
       "name": "Raoul  Duke",
       "id": 2
@@ -25,7 +20,7 @@
     },
     {
       "userId": 2,
-      "name": "does it work?",
+      "name": "does it work",
       "artist": "trails",
       "id": 7
     },
@@ -256,12 +251,6 @@
       "name": "the real new record",
       "artist": "the real real",
       "id": 46
-    },
-    {
-      "userId": 2,
-      "name": "the old",
-      "artist": "the old news",
-      "id": 47
     }
   ]
 }

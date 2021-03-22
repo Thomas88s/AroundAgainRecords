@@ -7,6 +7,7 @@ import { Route, Redirect } from "react-router-dom"
 import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register"
 import { userStorageKey } from "./components/auth/authSettings"
+import { NavBar } from "./components/navigation/NavBar"
 export const Store = () => (
     <>
   
@@ -15,6 +16,7 @@ export const Store = () => (
          if (sessionStorage.getItem(userStorageKey)) {
           return (
               <>
+              <NavBar />
               <AppViews />
              
             </>
