@@ -9,7 +9,7 @@ export const RecordForm = () => {
     const currentUserId = parseInt(sessionStorage.getItem("app_user_id"))   
 
     const [record, setRecord] = useState({
-        userID: currentUserId,
+        userId: currentUserId,
         name: "",
         artist: "",
         
@@ -79,7 +79,7 @@ export const RecordForm = () => {
     return (
       <form className="recordForm">
           {/* <h2 className="recordFormTitle">New Record</h2> */}
-          <h2 className="RecordTitle">{recordId ? "Edit Record" : "Add Record"}</h2>
+          <h2 className="RecordTitle">{recordId ? "Edit Record" : "New Record"}</h2>
           <fieldset>
               <div className="form-group">
                   <label htmlFor="name">Record name:</label>
