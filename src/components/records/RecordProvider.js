@@ -17,6 +17,11 @@ export const RecordProvider = (props) => {
       .then(res => res.json())
       .then(setRecords)
 }
+const viewCollection = () => {
+    return fetch("http://localhost:8088/collection")
+      .then(res => res.json())
+      .then(setRecords)
+}
 
 const getRecordById = (id) => {
     return fetch(`http://localhost:8088/records/${id}`)
@@ -56,7 +61,7 @@ const updateRecord = record => {
 return (
     // context provider allows any child elements to access states and functions
     <RecordContext.Provider value={{
-        records, getRecords, addRecord, getRecordById, deleteRecord, updateRecord
+        records, getRecords, addRecord, getRecordById, deleteRecord, updateRecord, viewCollection
     }}>
          {/* components that use the data from providers must be defined as children components */}
         {props.children}

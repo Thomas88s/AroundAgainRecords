@@ -4,6 +4,7 @@ import { Home } from "./components/Home"
 import { RecordList } from "./components/records/RecordList"
 import { RecordProvider } from "./components/records/RecordProvider"
 import { RecordForm } from "./components/records/RecordForm"
+import { CollectionList } from "./components/collections/CollectionList"
 
 export const AppViews = () => {
     return (
@@ -18,6 +19,9 @@ export const AppViews = () => {
             </Route>
             <Route exact path="/records/edit/:recordId(\d+)">
                 <RecordForm />
+            </Route>
+            <Route exact path="/collection">
+                <CollectionList />
             </Route>
         </RecordProvider>
         </>
