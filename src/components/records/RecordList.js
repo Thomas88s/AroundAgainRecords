@@ -9,8 +9,10 @@ import "./Record.css"
 
 
 export const RecordList = () => {
-    //   RecordContext is passed and changes state when `getAnimals()` is invoked
+    //   RecordContext is passed and changes state when `getRecords()` is invoked
     const { records, getRecords } = useContext(RecordContext)
+    const currentUserId = parseInt(sessionStorage.getItem("app_user_id"))
+    const userRecords = records.filter(records => currentUserId === records.userId)
     const history = useHistory()
 // tells React that your component needs to call getRecords() after render
 // getRecords() is the API call for the recordss 
@@ -27,7 +29,7 @@ return (
           </button>
         {
             // .map() is creating a new array populated with the results of calling the record function on every element in the calling array
-            records.map(record => {
+            userRecords.map(record => {
                 // return the properties of animal
                 return <RecordCard key={record.id} record={record} />
             })

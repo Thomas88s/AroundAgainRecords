@@ -6,7 +6,7 @@ import { useHistory, useParams } from 'react-router-dom';
 export const RecordForm = () => {
     const { addRecord, getRecords, getRecordById, updateRecord } = useContext(RecordContext)
 
-    const currentUserId = parseInt(sessionStorage.getItem("shopUser"))   
+    const currentUserId = parseInt(sessionStorage.getItem("app_user_id"))   
 
     const [record, setRecord] = useState({
         userID: currentUserId,
@@ -15,7 +15,7 @@ export const RecordForm = () => {
         
       });
 
-      const [isLoading, setIsLoading] = useState(true);
+      const [isLoading, setIsLoading] = useState();
       const { recordId } = useParams();
 
       const history = useHistory();  
@@ -25,46 +25,32 @@ export const RecordForm = () => {
       }, [])  
 
   
-    /*
-    Reach out to the world and get customers state
-    and locations state on initialization, so we can provide their data in the form dropdowns
-    */
-
-    //when a field changes, update state. The return will re-render and display based on the values in state
-        // NOTE! What's happening in this function can be very difficult to grasp. Read it over many times and ask a lot questions about it.
-    //Controlled component
+  
     const handleControlledInputChange = (event) => {
       /* When changing a state object or array,
       always create a copy, make changes, and then set state.*/
       const newRecord = { ...record }
       let selectedVal = event.target.value
-      // forms always provide values as strings. But we want to save the ids as numbers. This will cover both customer and location ids
-      if (event.target.id.includes("Id")) {
-        selectedVal = parseInt(selectedVal)
-      }
-      /* 
-      Set the property to the new value
-      using object bracket notation. */
+      
+     
       newRecord[event.target.id] = selectedVal
       // update state
       setRecord(newRecord)
     }
 
-    const handleClickSaveEvent = (event) => {
-      event.preventDefault() //Prevents the browser from submitting the form
-
-   
+    const handleClickSaveEvent = () => {
+     
       if(record.name === "") {
         window.alert("Fill all fields")
     }else{
-        setIsLoading();
+        setIsLoading(true);
         if (recordId)  {
             
             updateRecord({
-                userId: 1,
+                userId: currentUserId,
                 name: record.name,
                 artist: record.artist,
-                id: parseInt(recordId)
+                id: record.id
             })
             .then(() => history.push(`/records`))
         } else {
@@ -108,8 +94,11 @@ export const RecordForm = () => {
           </fieldset>
           <button className="btn btn-primary"
           disabled={isLoading}
-            onClick={handleClickSaveEvent}>
-            Save Record
+            onClick={event => {
+              event.preventDefault()
+              handleClickSaveEvent()
+            }}>
+            {recordId ? "Save Record" : "Add Record"}
           </button>
       </form>
     )
