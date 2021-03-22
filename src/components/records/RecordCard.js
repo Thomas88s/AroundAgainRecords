@@ -5,6 +5,8 @@ import "./Record.css"
 
 export const RecordCard = ({ record }) => {
     const { deleteRecord } = useContext(RecordContext)
+    const currentUserId = parseInt(sessionStorage.getItem("nutshell_user"))
+    
 
     const history = useHistory()
 
