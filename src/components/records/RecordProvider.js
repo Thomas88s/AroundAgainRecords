@@ -9,6 +9,7 @@ export const RecordContext = createContext()
 export const RecordProvider = (props) => {
 // useState defines the variable which will hold the data and then defines the function to be used to modify that state
     const [records, setRecords] = useState([])
+    const [ searchTerms, setSearchTerms ] = useState("")
 
     // performs state transitions in your database
     // NEEDS MORE CLARIFING!!!!!
@@ -61,7 +62,7 @@ const updateRecord = record => {
 return (
     // context provider allows any child elements to access states and functions
     <RecordContext.Provider value={{
-        records, getRecords, addRecord, getRecordById, deleteRecord, updateRecord, viewCollection
+        records, getRecords, addRecord, getRecordById, deleteRecord, updateRecord, viewCollection, searchTerms,  setSearchTerms
     }}>
          {/* components that use the data from providers must be defined as children components */}
         {props.children}
