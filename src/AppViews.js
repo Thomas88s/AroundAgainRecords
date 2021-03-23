@@ -5,6 +5,8 @@ import { RecordList } from "./components/records/RecordList"
 import { RecordProvider } from "./components/records/RecordProvider"
 import { RecordForm } from "./components/records/RecordForm"
 import { CollectionList } from "./components/collections/CollectionList"
+import { TitleSearch } from "./components/collections/CollectionSearch"
+import { ArtistSearch } from "./components/collections/CollectionSearch"
 
 export const AppViews = () => {
     return (
@@ -21,6 +23,8 @@ export const AppViews = () => {
                 <RecordForm />
             </Route>
             <Route exact path="/collection">
+                <TitleSearch />
+                <ArtistSearch />
                 <CollectionList />
             </Route>
         </RecordProvider>
