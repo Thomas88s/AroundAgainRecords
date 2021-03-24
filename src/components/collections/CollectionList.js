@@ -9,6 +9,8 @@ export const CollectionList = () => {
   const { records, getRecords, searchTerms } = useContext(RecordContext)
 
   const [ filteredRecords, setFiltered ] = useState([])
+  const [ filteredbyTitleRecords, setRecordFiltered ] = useState([])
+  
 
   // const history = useHistory()
 
@@ -25,18 +27,19 @@ export const CollectionList = () => {
   useEffect(() => {
    if (searchTerms !== "") {
     //  if user types an input this displays a match
-     const subset = records.filter(record => record.name.toLowerCase().includes(searchTerms))
-     setFiltered(subset)
+     const subset = records.filter(record => record.name.toLowerCase().includes(searchTerms.toLowerCase()))
+     setRecordFiltered(subset)
    } else {
-     setFiltered(records)
+     setRecordFiltered(records)
    }
+   
   }, [searchTerms, records]) 
 
   useEffect(() => {
     if (searchTerms !== "") {
      //  if user types an input this displays a match
-      const subset = records.filter(record => record.artist.toLowerCase().includes(searchTerms))
-      setFiltered(subset)
+      const subSet = records.filter(record => record.artist.toLowerCase().includes(searchTerms.toLowerCase()))
+      setFiltered(subSet)
     } else {
       setFiltered(records)
     }
@@ -52,7 +55,13 @@ export const CollectionList = () => {
         filteredRecords.map(record => {
           return <CollectionCard key={record.id} record={record} />
         })
+      },
+      {
+        filteredbyTitleRecords.map(record => {
+          return <CollectionCard key={record.id} record={record} />
+        })
       }
+       
     </div>
     </>
   )
