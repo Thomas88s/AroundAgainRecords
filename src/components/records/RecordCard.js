@@ -6,6 +6,7 @@ import "./Record.css"
 export const RecordCard = ({ record }) => {
     const { deleteRecord } = useContext(RecordContext)
     
+    // react-history manages session history using React. It's a thin wrapper around the history package. In web browsers, this library also transparently manages changes to the URL which makes it easier for creators of single-page applications to support things like bookmarks and the back button
     const history = useHistory()
   // takes care of removing deleted records 
   const handleRelease = () => {

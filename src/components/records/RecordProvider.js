@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react"
 
-// Context provides a way to share the values of props that are required by many components between components
+// Context provides a way to share the values of props, that are required by many components, between components
 export const RecordContext = createContext()
 
 

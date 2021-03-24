@@ -13,28 +13,10 @@
   ],
   "records": [
     {
-      "userId": 1,
-      "name": "HollowTruth",
-      "artist": "prince",
-      "id": 6
-    },
-    {
       "userId": 2,
       "name": "does it work",
       "artist": "trails",
       "id": 7
-    },
-    {
-      "userId": 1,
-      "name": "New ag",
-      "artist": "foofoos",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "name": "superlame",
-      "artist": "magical average joes",
-      "id": 10
     },
     {
       "userId": 2,
@@ -155,12 +137,6 @@
       "name": "Martins aquarium",
       "artist": "sunshine on you life",
       "id": 30
-    },
-    {
-      "userId": 1,
-      "name": "Martins aquarium",
-      "artist": "The Lawn KNomes",
-      "id": 31
     },
     {
       "userId": 2,
