@@ -5,6 +5,7 @@ import { Store } from "./Store"
 import reportWebVitals from './reportWebVitals';
 import "./index.css"
 
+// Renders all components to the DOM
 ReactDOM.render(
   <React.StrictMode>
    <Router>

@@ -8,7 +8,9 @@ import "./Record.css"
 export const RecordList = () => {
     //   RecordContext is passed and changes state when `getRecords()` is invoked
     const { records, getRecords } = useContext(RecordContext)
+    // This gets the user id from session storage 
     const currentUserId = parseInt(sessionStorage.getItem("app_user_id"))
+    // This matches the user with thier records through the currentUserId and userId
     const userRecords = records.filter(records => currentUserId === records.userId)
     const history = useHistory()
 // tells React that your component needs to call getRecords() after render

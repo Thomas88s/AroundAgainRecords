@@ -8,15 +8,14 @@ export const CollectionList = () => {
   // This state changes when `getRecords()` is invoked below
   const { records, getRecords, searchTerms } = useContext(RecordContext)
 
+  // The Array of Records is held in useState
   const [ filteredRecords, setFiltered ] = useState([])
+  // This holds the state when records is searched by name 
   const [ filteredbyTitleRecords, setRecordFiltered ] = useState([])
   
 
-  // const history = useHistory()
-
 
   // Empty dependency array - useEffect only runs after first render
-  
   useEffect(() => {
     getRecords()
 }, [])
@@ -28,6 +27,7 @@ export const CollectionList = () => {
    if (searchTerms !== "") {
     //  if user types an input this displays a match
      const subset = records.filter(record => record.name.toLowerCase().includes(searchTerms.toLowerCase()))
+    //  usestate function 
      setRecordFiltered(subset)
    } else {
      setRecordFiltered(records)
@@ -52,11 +52,13 @@ export const CollectionList = () => {
       <h1>Records</h1>
       <div className="records">
       {
+        // This returns an array of objects that are filtered from an the existing array of records
         filteredRecords.map(record => {
           return <CollectionCard key={record.id} record={record} />
         })
       },
       {
+        // This returns an array of objects that are filtered from an the existing array of records
         filteredbyTitleRecords.map(record => {
           return <CollectionCard key={record.id} record={record} />
         })

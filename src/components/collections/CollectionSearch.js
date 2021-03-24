@@ -2,6 +2,8 @@ import React, { useContext } from "react"
 import { RecordContext } from "../records/RecordProvider"
 import "../records/Record.css"
 
+
+// This captures the text from the user, as the user types, and immediately updates the searchTerms state variable in the parent component.
 export const TitleSearch = () => {
   const { setSearchTerms } = useContext(RecordContext)
 
@@ -16,6 +18,8 @@ export const TitleSearch = () => {
   )
 }
 
+
+// This captures the text from the user, as the user types, and immediately updates the searchTerms state variable in the parent component.
 export const ArtistSearch = () => {
   const { setSearchTerms } = useContext(RecordContext)
 

@@ -8,8 +8,12 @@ import { CollectionList } from "./components/collections/CollectionList"
 import { TitleSearch } from "./components/collections/CollectionSearch"
 import { ArtistSearch } from "./components/collections/CollectionSearch"
 
+
+// This exports components that need rendering
 export const AppViews = () => {
     return (
+        // This renders the UI when its path matches the current URL
+        // all communication between sibling component must go through their common ancestor
         <>
                 <Home />
         <RecordProvider>
