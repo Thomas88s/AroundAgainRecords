@@ -1,6 +1,8 @@
 import React from "react"
 import "../records/Record.css"
 
+
+// component for displaying an record 
 export const CollectionCard = ({ record }) => {
 
    return(

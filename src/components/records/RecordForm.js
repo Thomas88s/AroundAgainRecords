@@ -3,6 +3,8 @@ import { RecordContext } from "./RecordProvider"
 import "./Record.css"
 import { useHistory, useParams } from 'react-router-dom';
 
+
+// Context provides a way to share values like these between components without having to explicitly pass a prop through every level of the tree
 export const RecordForm = () => {
     const { addRecord, getRecords, getRecordById, updateRecord } = useContext(RecordContext)
 
@@ -16,6 +18,7 @@ export const RecordForm = () => {
       });
 
       const [isLoading, setIsLoading] = useState();
+      // Returns an object of the params for the route rendered 
       const { recordId } = useParams();
 
       const history = useHistory();  
@@ -74,7 +77,7 @@ export const RecordForm = () => {
       })
     }, [])
  
-   
+    // the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component
 
     return (
       <form className="recordForm">

@@ -5,11 +5,9 @@ import "./Record.css"
 
 export const RecordCard = ({ record }) => {
     const { deleteRecord } = useContext(RecordContext)
-    // const currentUserId = parseInt(sessionStorage.getItem("nutshell_user"))
     
-
     const history = useHistory()
-
+  // takes care of removing deleted records 
   const handleRelease = () => {
       deleteRecord(record.id)
         .then(() => {

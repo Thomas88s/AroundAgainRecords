@@ -11,7 +11,7 @@ import { NavBar } from "./components/navigation/NavBar"
 export const Store = () => (
     <>
   
-
+{/* This renders the Nav, the record components and directs authentication of the user  */}
      <Route render={() => {
          if (sessionStorage.getItem(userStorageKey)) {
           return (
