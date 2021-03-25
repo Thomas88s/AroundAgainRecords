@@ -56,7 +56,7 @@ export const CollectionList = () => {
         filteredRecords.map(record => {
           return <CollectionCard key={record.id} record={record} />
         })
-      },
+      }
       {
         // This returns an array of objects that are filtered from an the existing array of records
         filteredbyTitleRecords.map(record => {

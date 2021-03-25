@@ -23,7 +23,7 @@ return (
     <>
       <div className="records">
         <h3>Records</h3>
-      <button className= "recordButton" onClick={() => {history.push("/records/create")}}>
+      <button id= "recordButton" onClick={() => {history.push("/records/create")}}>
             Add Record
           </button>
         {

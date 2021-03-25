@@ -63,56 +63,8 @@
     {
       "userId": 2,
       "name": "adsg",
-      "artist": "The Yard KNomes",
-      "id": 18
-    },
-    {
-      "userId": 2,
-      "name": "Martins aquarium",
-      "artist": "The Yard KNomes",
-      "id": 19
-    },
-    {
-      "userId": 2,
-      "name": "adsg",
       "artist": "foodmunchers",
       "id": 20
-    },
-    {
-      "userId": 2,
-      "name": "Thomas witherow",
-      "artist": "foodmunchers",
-      "id": 21
-    },
-    {
-      "userId": 2,
-      "name": "New age ",
-      "artist": "sunshine on you life",
-      "id": 22
-    },
-    {
-      "userId": 2,
-      "name": "adsg",
-      "artist": "The Lawn KNomes",
-      "id": 23
-    },
-    {
-      "userId": 2,
-      "name": "adsg",
-      "artist": "The Yard KNomes",
-      "id": 24
-    },
-    {
-      "userId": 2,
-      "name": "Thomas witherow",
-      "artist": "foodmunchers",
-      "id": 25
-    },
-    {
-      "userId": 2,
-      "name": "adsg",
-      "artist": "The Lawn KNomes",
-      "id": 26
     },
     {
       "userId": 2,
@@ -122,99 +74,15 @@
     },
     {
       "userId": 2,
-      "name": "adsg",
-      "artist": "The Lawn KNomes",
-      "id": 28
-    },
-    {
-      "userId": 2,
-      "name": "Thomas witherow",
-      "artist": "The Lawn KNomes",
-      "id": 29
-    },
-    {
-      "userId": 2,
       "name": "Martins aquarium",
       "artist": "sunshine on you life",
       "id": 30
-    },
-    {
-      "userId": 2,
-      "name": "New age ",
-      "artist": "Old Age record",
-      "id": 32
-    },
-    {
-      "userId": 2,
-      "name": "Thomas witherow",
-      "artist": "sunshine on you life",
-      "id": 33
-    },
-    {
-      "userId": 2,
-      "name": "Thomas witherow",
-      "artist": "The Yard KNomes",
-      "id": 34
-    },
-    {
-      "userId": 2,
-      "name": "Thomas witherow",
-      "artist": "sunshine on you life",
-      "id": 35
-    },
-    {
-      "userId": 2,
-      "name": "Thomas witherow",
-      "artist": "The Yard KNomes",
-      "id": 36
-    },
-    {
-      "userId": 2,
-      "name": "Thomas witherow",
-      "artist": "sunshine on you life",
-      "id": 37
-    },
-    {
-      "userId": 2,
-      "name": "New age ",
-      "artist": "The Yard KNomes",
-      "id": 38
-    },
-    {
-      "userId": 2,
-      "name": "Thomas witherow",
-      "artist": "sunshine on you life",
-      "id": 39
-    },
-    {
-      "userId": 2,
-      "name": "Martins aquarium",
-      "artist": "foofoos",
-      "id": 40
-    },
-    {
-      "userId": 2,
-      "name": "New age ",
-      "artist": "Old Age record",
-      "id": 41
     },
     {
       "userId": 1,
       "name": "happy grapes and apples",
       "artist": "garden variety",
       "id": 42
-    },
-    {
-      "userId": 2,
-      "name": "New age ",
-      "artist": "sunshine on you life",
-      "id": 43
-    },
-    {
-      "userId": 2,
-      "name": "New age ",
-      "artist": "sunshine on you life",
-      "id": 44
     },
     {
       "userId": 1,
@@ -227,12 +95,6 @@
       "name": "the real new record",
       "artist": "the real real",
       "id": 46
-    },
-    {
-      "userId": 1,
-      "name": "Thomas witherow",
-      "artist": "",
-      "id": 47
     }
   ]
 }

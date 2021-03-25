@@ -43,8 +43,8 @@ export const RecordForm = () => {
 
     const handleClickSaveEvent = () => {
      
-      if(record.name === "") {
-        window.alert("Fill all fields")
+      if(record.name === "" || record.artist === "") {
+        window.alert("Missed a box, Please fill")
     }else{
         setIsLoading(true);
         if (recordId)  {

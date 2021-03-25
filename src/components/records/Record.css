@@ -2,11 +2,57 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
+   
+    
   }
   
   .record {
+      font-family: monospace;
       flex-basis: 28%;
       margin: 1em;
       padding: 1em;
-      border: 1px solid goldenrod;
+      border: 8px solid rgb(0, 0, 0);
+      background-color:  #FCE205;
+      
+      
+  }
+
+  .recordName {
+      font-family: Stenstreet;
+      font-weight: bolder;
+
+  }
+
+  #recordButton {
+    
+        background-color: yellow;
+        border: solid;
+        border: black;
+        color:black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        
+      
+  }
+  #recordButton:hover {
+      color: yellow;
+      background-color: black;
+  } 
+
+  #editButton {
+    color: yellow;
+    background-color: black;
+  }
+
+  #deleteButton {
+    color: yellow;
+    background-color: black;
+  }
+
+  .recordForm {
+      background-color: yellow;
   }

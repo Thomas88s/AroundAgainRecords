@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link, useHistory } from "react-router-dom";
 import { authApi, userStorageKey } from "./authSettings"
-
+import "./Login.css"
 
 
 export const Login = () => {
@@ -45,8 +45,9 @@ export const Login = () => {
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Around Again Records</h1>
-                    <h2>Plug in that email!</h2>
+                    <h1>Around Again Records
+                    </h1>
+                    <h2>Welcome! Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"
@@ -70,3 +71,4 @@ export const Login = () => {
         </main>
     )
 }
+
