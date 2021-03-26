@@ -4,12 +4,12 @@ import React from "react";
 
 export const Home = () => (
     <>
-        <h2>Around Again Records</h2>
-        <h3>The place to visit for vinyl</h3>
+        <h2>Complete failure Records</h2>
+        <h3>Out of buisness</h3>
 
         <address>
-            <div>Visit Us at the Nashville west Location</div>
-            <div>500 FancyPants Way</div>
+            <div>No more Locations</div>
+            <div></div>
         </address>
                  
     </>
