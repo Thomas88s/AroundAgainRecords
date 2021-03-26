@@ -4,11 +4,11 @@ import React from "react";
 
 export const Home = () => (
     <>
-        <h2>Complete failure Records</h2>
-        <h3>Out of buisness</h3>
+        <h2>Around Again Records</h2>
+        <h3>Welcome and Thanks for Visiting</h3>
 
         <address>
-            <div>No more Locations</div>
+            <div></div>
             <div></div>
         </address>
                  

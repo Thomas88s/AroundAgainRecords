@@ -93,8 +93,20 @@
     {
       "userId": 1,
       "name": "the real new record",
-      "artist": "the real real",
+      "artist": "the real real oh it just got real",
       "id": 46
+    },
+    {
+      "userId": 1,
+      "name": "Martins aquarium",
+      "artist": "sunshine on you life",
+      "id": 47
+    },
+    {
+      "userId": 2,
+      "name": "samuri spirits",
+      "artist": "The Lawn KNomes",
+      "id": 48
     }
   ]
 }
